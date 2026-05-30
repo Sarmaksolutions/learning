@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Use this site as a standalone Netlify project for learn.sarmak.in.
+# To assign the custom domain, set learn.sarmak.in in your Netlify site settings.
+# If the site is deployed from this folder only, this config is sufficient for build and publish.
