@@ -1,119 +1,10 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles } from 'lucide-react';
-
-function SiteNav() {
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1c1d1b]/95 backdrop-blur-xl border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <img
-            src="/logo.png"
-            alt="SARMAK"
-            className="h-12 w-auto transition-transform duration-300 hover:scale-105"
-          />
-          <div className="hidden sm:block">
-            <span className="text-xl font-bold tracking-wider">SARMAK <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-lime-300 to-emerald-500">Learning Portal</span></span>
-            <span className="block text-xs text-gold font-mono tracking-widest">INNOVATE. TRANSFORM. EXCEL.</span>
-          </div>
-        </div>
-        <div className="flex items-center gap-4">
-          <Link to="/" className="text-sm text-white/80 hover:text-gold transition-colors">
-            Back to Home
-          </Link>
-          <a href="https://sarmak.in" className="text-sm text-white/80 hover:text-gold transition-colors">
-            SARMAK Main Site →
-          </a>
-        </div>
-      </div>
-    </nav>
-  );
-}
-
-function SiteFooter() {
-  return (
-    <footer className="bg-black/50 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-2">
-            <a href="https://sarmak.in" className="flex items-center gap-3 mb-6 inline-flex">
-              <img src="/logo.png" alt="SARMAK" className="h-14 w-auto" />
-              <div>
-                <span className="text-2xl font-bold text-white tracking-wider block">SARMAK</span>
-                <span className="text-xs text-gold font-mono tracking-widest">INNOVATE. TRANSFORM. EXCEL.</span>
-              </div>
-            </a>
-            <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-sm">
-              SARMAK is a group of technology enthusiasts driven by passion and commitment to revolutionize businesses through innovative IT solutions and AI-powered services.
-            </p>
-            <div className="space-y-3 text-sm text-white/60">
-              <a href="mailto:info@sarmak.in" className="flex items-center gap-3 hover:text-gold transition-colors">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gold/10 text-gold">@</span>
-                info@sarmak.in
-              </a>
-              <a href="tel:+919764000745" className="flex items-center gap-3 hover:text-gold transition-colors">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gold/10 text-gold">📞</span>
-                +91 97640 00745
-              </a>
-              <div className="flex items-start gap-3 text-white/60">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gold/10 text-gold">📍</span>
-                Joyville, Meridian-1302, Hinjewadi, Pune MH 411057, India
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-6 text-sm uppercase tracking-wider">Quick Links</h4>
-            <ul className="space-y-3 text-sm">
-              <li><a href="https://sarmak.in" className="text-white/60 hover:text-gold transition-colors">Home</a></li>
-              <li><a href="https://sarmak.in/about" className="text-white/60 hover:text-gold transition-colors">About Us</a></li>
-              <li><a href="https://sarmak.in/services/learning-with-sarmak" className="text-white/60 hover:text-gold transition-colors">Learning with SARMAK</a></li>
-              <li><a href="https://sarmak.in/contact" className="text-white/60 hover:text-gold transition-colors">Contact</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-6 text-sm uppercase tracking-wider">Services</h4>
-            <ul className="space-y-3 text-sm">
-              <li><a href="https://sarmak.in/services/ai" className="text-white/60 hover:text-gold transition-colors">AI Solutions</a></li>
-              <li><a href="https://sarmak.in/services/cloud" className="text-white/60 hover:text-gold transition-colors">Cloud Services</a></li>
-              <li><a href="https://sarmak.in/services/database" className="text-white/60 hover:text-gold transition-colors">Database Services</a></li>
-              <li><a href="https://sarmak.in/services/devops" className="text-white/60 hover:text-gold transition-colors">DevOps</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-6 text-sm uppercase tracking-wider">Resources</h4>
-            <ul className="space-y-3 text-sm">
-              <li><a href="https://sarmak.in/blog" className="text-white/60 hover:text-gold transition-colors">Blog</a></li>
-              <li><a href="https://sarmak.in/resources" className="text-white/60 hover:text-gold transition-colors">Resources</a></li>
-              <li><a href="https://sarmak.in/faq" className="text-white/60 hover:text-gold transition-colors">FAQ</a></li>
-              <li><a href="https://sarmak.in/service-plans" className="text-white/60 hover:text-gold transition-colors">Service Plans</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="border-t border-white/5 pt-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
-            <p>© {new Date().getFullYear()} SARMAK. All rights reserved.</p>
-            <div className="flex flex-wrap items-center gap-6">
-              <a href="https://sarmak.in/privacy-policy" className="hover:text-gold transition-colors">Privacy Policy</a>
-              <a href="https://sarmak.in/terms-of-service" className="hover:text-gold transition-colors">Terms of Service</a>
-            </div>
-            <div className="flex items-center gap-3">
-              <a href="https://www.linkedin.com/company/sarmak-solutions" target="_blank" rel="noreferrer" className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-gold hover:text-[#1c1d1b] transition-all duration-300">in</a>
-              <a href="https://x.com/SarmakSolutions" target="_blank" rel="noreferrer" className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-gold hover:text-[#1c1d1b] transition-all duration-300">x</a>
-              <a href="https://www.instagram.com/sarmaksolutions/" target="_blank" rel="noreferrer" className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-gold hover:text-[#1c1d1b] transition-all duration-300">ig</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
+import PageShell from './components/PageShell';
 
 function CourseDetailsSection() {
   return (
-    <section id="course-details" className="py-20 bg-[#0d0e10] border-t border-white/10 mt-28">
+    <section id="course-details" className="py-20 bg-[#0d0e10] border-t border-white/10 mt-8">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
           <span className="text-gold text-sm font-medium uppercase tracking-widest mb-2 block">4-Week Technology Foundation Program</span>
@@ -369,36 +260,34 @@ function CourseDetailsSection() {
 
 export default function CourseDetails() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#1c1d1b] to-[#0d0e10] text-white overflow-hidden">
-      <SiteNav />
-      <main className="pt-32">
-        <section className="pt-10 pb-8">
-          <div className="max-w-6xl mx-auto px-6 text-center">
-            <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold text-[#1c1d1b] font-bold uppercase tracking-[0.25em]">
-              <Sparkles className="w-5 h-5" /> Course Details
-            </div>
-            <h1 className="text-4xl md:text-5xl font-black mb-4">Full 4-Week Course Breakdown</h1>
-            <p className="text-lg text-white/70 max-w-3xl mx-auto">
-              Explore the complete weekly program, daily topics, and hands-on projects designed for college graduates ready to launch an IT career.
-            </p>
+    <PageShell
+      title="Full Course Details"
+      description="Explore the full 4-week training path, hands-on modules, and learning outcomes for the SARMAK program."
+    >
+      <section className="pt-10 pb-8">
+        <div className="max-w-6xl mx-auto px-6 text-center xl:text-left">
+          <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold text-[#1c1d1b] font-bold uppercase tracking-[0.25em]">
+            <Sparkles className="w-5 h-5" /> Course Details
           </div>
-        </section>
+          <h2 className="text-4xl md:text-5xl font-black mb-4">Full 4-Week Course Breakdown</h2>
+          <p className="text-lg text-white/70 max-w-3xl mx-auto xl:mx-0">
+            Explore the complete weekly program, daily topics, and hands-on projects designed for college graduates ready to launch an IT career.
+          </p>
+        </div>
+      </section>
 
-        <CourseDetailsSection />
+      <CourseDetailsSection />
 
-        <section className="py-10">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <Link
-              to="/"
-              className="btn-outline inline-flex items-center gap-2"
-            >
-              <ArrowRight className="w-5 h-5" /> Back to Home
-            </Link>
-          </div>
-        </section>
-      </main>
-
-      <SiteFooter />
-    </div>
+      <section className="py-10">
+        <div className="max-w-4xl mx-auto px-6 text-center xl:text-left">
+          <Link
+            to="/dashboard"
+            className="btn-outline inline-flex items-center gap-2"
+          >
+            <ArrowRight className="w-5 h-5" /> Go to Dashboard
+          </Link>
+        </div>
+      </section>
+    </PageShell>
   );
 }

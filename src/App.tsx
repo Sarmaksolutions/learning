@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Star, Users, Zap, BookOpen, Trophy, CheckCircle } from 'lucide-react';
+import Logo from './components/Logo';
 
 export default function LearningLanding() {
   return (
@@ -8,19 +9,26 @@ export default function LearningLanding() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1c1d1b]/95 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img
-              src="/logo.png"
-              alt="SARMAK"
-              className="h-12 w-auto transition-transform duration-300 hover:scale-105"
-            />
+            <Logo className="h-12 w-auto transition-transform duration-300 hover:scale-105" />
             <div className="hidden sm:block">
               <span className="text-xl font-bold tracking-wider">SARMAK <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-lime-300 to-emerald-500">Learning Portal</span></span>
               <span className="block text-xs text-gold font-mono tracking-widest">INNOVATE. TRANSFORM. EXCEL.</span>
             </div>
           </div>
-          <a href="https://sarmak.in" className="text-sm text-white/80 hover:text-gold transition-colors">
-            Back to SARMAK →
-          </a>
+          <div className="flex items-center gap-4">
+            <a href="https://sarmak.in" className="text-sm text-white/80 hover:text-gold transition-colors">
+              Back to SARMAK →
+            </a>
+            <Link to="/course-details" className="text-sm text-white/80 hover:text-gold transition-colors">
+              Course Details
+            </Link>
+            <Link to="/profile" className="text-sm text-white/80 hover:text-gold transition-colors">
+              Profile
+            </Link>
+            <a href="/login" className="btn-outline text-sm inline-flex items-center gap-2">
+              Login
+            </a>
+          </div>
         </div>
       </nav>
 
@@ -60,6 +68,13 @@ export default function LearningLanding() {
               className="btn-outline text-lg inline-flex items-center gap-2"
             >
               Learn More
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              to="/login"
+              className="btn-outline text-lg inline-flex items-center gap-2"
+            >
+              Learner Login
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -417,7 +432,7 @@ export default function LearningLanding() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
             <div className="lg:col-span-2">
               <a href="https://sarmak.in" className="flex items-center gap-3 mb-6 inline-flex">
-                <img src="/logo.png" alt="SARMAK" className="h-14 w-auto" />
+                <Logo className="h-14 w-auto" />
                 <div>
                   <span className="text-2xl font-bold text-white tracking-wider block">SARMAK</span>
                   <span className="text-xs text-gold font-mono tracking-widest">INNOVATE. TRANSFORM. EXCEL.</span>
