@@ -1,62 +1,217 @@
-import Logo from "./components/Logo";
-import { useSearchParams, Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
-export default function PaymentSuccess() {
+const PaymentSuccess = () => {
   const [searchParams] = useSearchParams();
-  const orderId = searchParams.get("order_id");
+
+  const orderId =
+    searchParams.get("order_id") || "N/A";
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#1c1d1b] to-[#0d0e10] text-white flex items-center justify-center px-6">
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "#050505",
+        color: "#fff",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "30px",
+        fontFamily: "Arial, Helvetica, sans-serif",
+      }}
+    >
+      <div
+        style={{
+          width: "100%",
+          maxWidth: "700px",
+          background: "#111",
+          border: "1px solid #d4af37",
+          borderRadius: "22px",
+          padding: "50px",
+          textAlign: "center",
+          boxShadow: "0 0 35px rgba(212,175,55,0.2)",
+        }}
+      >
+        <img
+          src="/logo.png"
+          alt="SARMAK Logo"
+          style={{
+            width: "120px",
+            marginBottom: "20px",
+          }}
+        />
 
-      <div className="w-full max-w-lg rounded-3xl bg-[#111314] border border-white/10 p-8 md:p-10 text-center shadow-2xl">
+        <h1
+          style={{
+            color: "#d4af37",
+            fontSize: "38px",
+          }}
+        >
+          SARMAK Learning Portal
+        </h1>
 
-        {/* SARMAK LOGO */}
-        <div className="flex justify-center mb-8">
-          <Logo className="h-16 w-auto" />
+        <div
+          style={{
+            width: "90px",
+            height: "3px",
+            background: "#d4af37",
+            margin: "20px auto 30px",
+          }}
+        />
+
+        <div
+          style={{
+            width: "90px",
+            height: "90px",
+            borderRadius: "50%",
+            border: "3px solid #d4af37",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "0 auto 25px",
+            color: "#d4af37",
+            fontSize: "50px",
+          }}
+        >
+          ✓
         </div>
 
-        {/* SUCCESS ICON */}
-        <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-400/30">
-          <span className="text-4xl text-emerald-400">✓</span>
-        </div>
-
-        <h1 className="text-3xl md:text-4xl font-black mb-4">
+        <h1
+          style={{
+            color: "#d4af37",
+            fontSize: "38px",
+          }}
+        >
           Payment Successful!
         </h1>
 
-        <p className="text-white/70 text-lg mb-6">
-          Thank you for registering for the
-          <br />
-          <strong className="text-white">
-            WORRIES to Hired Workshop
-          </strong>
-        </p>
+        <h2>
+          Welcome to the AI & Technology Career Bootcamp
+        </h2>
 
-        {orderId && (
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-4 mb-6">
-            <p className="text-sm text-white/50 mb-1">
-              Order ID
-            </p>
-
-            <p className="text-sm break-all text-emerald-400">
-              {orderId}
-            </p>
-          </div>
-        )}
-
-        <p className="text-white/60 mb-8">
-          Your registration has been successfully received.
-          We will contact you with the next steps.
-        </p>
-
-        <Link
-          to="/webinar"
-          className="btn-primary w-full inline-flex justify-center items-center gap-2 text-lg"
+        <p
+          style={{
+            color: "#ddd",
+            fontSize: "17px",
+            lineHeight: "1.7",
+          }}
         >
-          Back to Webinar
-        </Link>
+          Your registration is confirmed. 🎉
+          <br />
+          <br />
+          Your journey toward understanding the complete
+          technology ecosystem starts here.
+        </p>
 
+        <div
+          style={{
+            margin: "30px auto",
+            padding: "20px",
+            background: "#1b1b1b",
+            border: "1px solid #444",
+            borderRadius: "12px",
+            maxWidth: "300px",
+          }}
+        >
+          <div
+            style={{
+              color: "#999",
+              fontSize: "13px",
+              marginBottom: "8px",
+            }}
+          >
+            AMOUNT PAID
+          </div>
+
+          <div
+            style={{
+              color: "#d4af37",
+              fontSize: "36px",
+              fontWeight: "bold",
+            }}
+          >
+            ₹9
+          </div>
+        </div>
+
+        <div
+          style={{
+            margin: "25px auto",
+            padding: "10px 15px",
+            border: "1px solid #555",
+            borderRadius: "20px",
+            color: "#ddd",
+            fontSize: "13px",
+          }}
+        >
+          Order ID: {orderId}
+        </div>
+
+        <div
+          style={{
+            marginTop: "30px",
+            padding: "25px",
+            border: "1px solid #d4af37",
+            borderRadius: "12px",
+            color: "#ddd",
+            lineHeight: "1.7",
+          }}
+        >
+          <strong
+            style={{
+              color: "#d4af37",
+              fontSize: "18px",
+            }}
+          >
+            AI → Cloud & DevOps → Databases
+            → Operating Systems → Networking
+          </strong>
+        </div>
+
+        <h2 style={{ marginTop: "30px" }}>
+          What You'll Gain
+        </h2>
+
+        <div
+          style={{
+            textAlign: "left",
+            color: "#ddd",
+            lineHeight: "1.8",
+          }}
+        >
+          <div>✓ Understand modern technology</div>
+          <div>✓ Learn AI, Cloud and Data</div>
+          <div>✓ Build strong technology fundamentals</div>
+          <div>✓ Understand databases and networking</div>
+          <div>✓ Develop practical industry knowledge</div>
+        </div>
+
+        <h3
+          style={{
+            color: "#d4af37",
+            marginTop: "30px",
+          }}
+        >
+          🚀 Your learning journey starts here.
+        </h3>
+
+        <a
+          href="/dashboard"
+          style={{
+            display: "inline-block",
+            marginTop: "25px",
+            padding: "14px 38px",
+            background: "#d4af37",
+            color: "#111",
+            borderRadius: "8px",
+            textDecoration: "none",
+            fontWeight: "bold",
+          }}
+        >
+          Back to Learning Portal
+        </a>
       </div>
     </div>
   );
-}
+};
+
+export default PaymentSuccess;

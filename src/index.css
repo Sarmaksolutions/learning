@@ -2,19 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ================================
+   GLOBAL STYLES
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #000000;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ================================
+   SCROLLBAR
+================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f5c367;
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
+
 @keyframes blink {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
   }
+
   50% {
     box-shadow: 0 0 0 20px rgba(255, 215, 0, 0);
   }
@@ -28,16 +90,120 @@
   animation: pulse-glow 2s ease-out infinite;
 }
 
-@layer components {
-  .btn-primary {
-    @apply px-6 py-3 bg-gold text-[#1c1d1b] font-semibold rounded-md transition-all duration-300 hover:bg-[#d4a84f] hover:shadow-lg hover:shadow-[#f5c367]/20;
-  }
+/* ================================
+   SARMAK COLORS
+================================ */
 
-  .btn-outline {
-    @apply px-6 py-3 border-2 border-gold text-gold font-semibold rounded-md transition-all duration-300 hover:bg-gold hover:text-[#1c1d1b];
-  }
+.text-gold {
+  color: #f5c367;
+}
 
-  .glass-card {
-    @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl;
-  }
+.bg-gold {
+  background-color: #f5c367;
+}
+
+.border-gold {
+  border-color: #f5c367;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background: #f5c367;
+  color: #1c1d1b;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #d4a84f;
+  box-shadow: 0 8px 25px rgba(245, 195, 103, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background: transparent;
+  color: #f5c367;
+  font-weight: 600;
+  border: 2px solid #f5c367;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #f5c367;
+  color: #1c1d1b;
+}
+
+/* ================================
+   GLASS CARD
+================================ */
+
+.glass-card {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* ================================
+   LINKS
+================================ */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f5c367;
+}
+
+/* ================================
+   IMAGES
+================================ */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ================================
+   FORM ELEMENTS
+================================ */
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #f5c367;
+  box-shadow: 0 0 0 2px rgba(245, 195, 103, 0.15);
+}
+
+/* ================================
+   SELECTION
+================================ */
+
+::selection {
+  background: #f5c367;
+  color: #000000;
 }

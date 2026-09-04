@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment Successful | SARMAK Learning Portal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    #3a3a3a 0%,
+                    #171717 35%,
+                    #050505 80%
+                );
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+        }
+
+        .payment-container {
+            width: 100%;
+            max-width: 700px;
+
+            background: #111111;
+
+            border: 1px solid #d4af37;
+            border-radius: 22px;
+
+            padding: 55px 50px;
+
+            text-align: center;
+
+            box-shadow:
+                0 0 35px rgba(212, 175, 55, 0.18),
+                0 25px 70px rgba(0, 0, 0, 0.75);
+        }
+
+        .success-logo {
+            width: 120px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .gold-line {
+            width: 90px;
+            height: 3px;
+
+            background: #d4af37;
+
+            margin: 0 auto 30px;
+
+            border-radius: 10px;
+        }
+
+        .success-icon {
+            width: 90px;
+            height: 90px;
+
+            margin: 0 auto 25px;
+
+            border-radius: 50%;
+
+            border: 3px solid #d4af37;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #d4af37;
+
+            font-size: 48px;
+            font-weight: bold;
+
+            box-shadow:
+                0 0 20px rgba(212, 175, 55, 0.25);
+        }
+
+        h1 {
+            font-size: 38px;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            color: #cccccc;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .amount-box {
+            width: 300px;
+            max-width: 100%;
+
+            margin: 0 auto 30px;
+
+            padding: 22px;
+
+            background: #1b1b1b;
+
+            border: 1px solid #444444;
+
+            border-radius: 12px;
+        }
+
+        .amount-title {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #999999;
+            margin-bottom: 8px;
+        }
+
+        .amount {
+            font-size: 36px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        .order-id {
+            display: inline-block;
+
+            margin-bottom: 25px;
+
+            font-size: 12px;
+            letter-spacing: 1px;
+
+            color: #d9d9d9;
+
+            background: rgba(212, 175, 55, 0.06);
+
+            border: 1px solid rgba(212, 175, 55, 0.25);
+
+            border-radius: 999px;
+
+            padding: 8px 12px;
+        }
+
+        .technology-box {
+            margin: 30px auto;
+
+            padding: 25px;
+
+            border: 1px solid #d4af37;
+
+            border-radius: 12px;
+
+            max-width: 650px;
+        }
+
+        .technology {
+            font-size: 18px;
+            font-weight: bold;
+            color: #d4af37;
+            line-height: 1.6;
+        }
+
+        .benefits {
+            text-align: left;
+
+            max-width: 550px;
+
+            margin: 20px auto;
+
+            line-height: 1.8;
+
+            color: #ddd;
+        }
+
+        .start {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d4af37;
+            margin-top: 30px;
+        }
+
+        .note {
+            margin-top: 15px;
+            color: #aaa;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .home-button {
+            display: inline-block;
+
+            padding: 14px 38px;
+
+            background: #d4af37;
+
+            color: #111111;
+
+            border: none;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            margin-top: 25px;
+
+            transition: 0.3s;
+        }
+
+        .home-button:hover {
+            background: #f1d76b;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px rgba(212, 175, 55, 0.25);
+        }
+
+        .footer {
+            margin-top: 35px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #333333;
+
+            color: #777777;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+        .footer strong {
+            color: #d4af37;
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .payment-container {
+                padding: 40px 25px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .message {
+                font-size: 15px;
+            }
+
+            .amount {
+                font-size: 30px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="payment-container">
+
+        <!-- SARMAK LOGO -->
+        <img
+            src="/logo.png"
+            alt="SARMAK Logo"
+            class="success-logo"
+        >
+
+        <h1>SARMAK Learning Portal</h1>
+
+        <div class="gold-line"></div>
+
+        <!-- SUCCESS ICON -->
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <!-- SUCCESS MESSAGE -->
+        <h1>
+            Payment Successful!
+        </h1>
+
+        <h2>
+            Welcome to the AI & Technology Career Bootcamp
+        </h2>
+
+        <p class="message">
+            Your registration is confirmed. 🎉
+            <br><br>
+
+            Your journey toward understanding the complete
+            technology ecosystem starts here.
+        </p>
+
+        <!-- AMOUNT -->
+        <div class="amount-box">
+
+            <div class="amount-title">
+                AMOUNT PAID
+            </div>
+
+            <div class="amount">
+                ₹9
+            </div>
+
+        </div>
+
+        <!-- ORDER ID -->
+        <div
+            class="order-id"
+            id="order-id">
+            Order ID: Checking...
+        </div>
+
+        <!-- BOOTCAMP INFORMATION -->
+        <div class="technology-box">
+
+            <div class="technology">
+                AI → Cloud & DevOps → Databases
+                → Operating Systems → Networking
+            </div>
+
+            <p class="message">
+                You won't just learn individual technologies —
+                you'll understand how they connect and work
+                together in the real world.
+            </p>
+
+        </div>
+
+        <!-- WHAT YOU WILL GAIN -->
+        <h2>
+            What You'll Gain
+        </h2>
+
+        <div class="benefits">
+
+            <div>
+                ✓ Understand the bigger picture of modern technology
+            </div>
+
+            <div>
+                ✓ Learn how AI, Cloud and Data work together
+            </div>
+
+            <div>
+                ✓ Build strong technology fundamentals
+            </div>
+
+            <div>
+                ✓ Connect systems, databases and networking concepts
+            </div>
+
+            <div>
+                ✓ Develop practical, industry-oriented knowledge
+            </div>
+
+        </div>
+
+        <div class="start">
+            🚀 Your learning journey starts here.
+        </div>
+
+        <div class="note">
+            Registration confirmed.
+            More details and joining instructions
+            will be shared with you shortly.
+        </div>
+
+        <!-- BACK TO LEARNING PORTAL -->
+        <a
+            href="https://learn.sarmak.in"
+            class="home-button">
+            Back to Learning Portal
+        </a>
+
+        <!-- FOOTER -->
+        <div class="footer">
+
+            🔒 Secure Payment
+            &nbsp; | &nbsp;
+
+            <strong>SARMAK Learning Portal</strong>
+
+            <br>
+
+            5 in 1 Workshop
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+        const orderId =
+            params.get("order_id");
+
+        const orderEl =
+            document.getElementById("order-id");
+
+        if (orderEl) {
+
+            orderEl.textContent =
+                orderId
+                    ? `Order ID: ${orderId}`
+                    : "Order ID: N/A";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
