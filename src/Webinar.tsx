@@ -1,17 +1,25 @@
+import { useEffect } from "react";
+
 const Webinar = () => {
+  useEffect(() => {
+    window.location.replace("https://sarmakpro.netlify.app/");
+  }, []);
+
   return (
-    <div style={{ width: "100%", height: "100vh" }}>
-      <iframe
-        src="https://sarmakpro.netlify.app/"
-        title="SARMAK Webinar"
-        style={{
-          width: "100%",
-          height: "100%",
-          border: "none",
-        }}
-      />
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "#050505",
+        color: "#d4af37",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontFamily: "Arial, Helvetica, sans-serif",
+      }}
+    >
+      Opening SARMAK Webinar...
     </div>
   );
 };
 
-export default Webinar; 
+export default Webinar;
